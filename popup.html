@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 15px;
+    }
+    .input-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin-bottom: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    #status {
+      margin-top: 10px;
+      padding: 10px;
+      background: #f0f0f0;
+      border-radius: 4px;
+    }
+    .price-list {
+      margin-top: 5px;
+      font-size: 12px;
+      color: #666;
+    }
+    .hint {
+      font-size: 12px;
+      color: #666;
+      margin-top: 3px;
+    }
+    .input-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .input-row input {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="input-group">
+    <label>選擇日期</label>
+    <input type="date" id="dateInput">
+  </div>
+  
+  <div class="input-group">
+    <label>票價和座位區域</label>
+    <div class="input-row">
+      <input type="number" id="priceInput" placeholder="票價(例如: 3080)">
+      <input type="text" id="seatArea" placeholder="座位區域(例如: D2)">
+    </div>
+    <div class="hint">可用票價: 800, 1680, 2280, 2680, 3080, 3480, 3980</div>
+  </div>
+
+  <button id="findButton">開始搶票</button>
+  <div id="status">請輸入日期和票價</div>
+  <script src="popup.js"></script>
+</body>
+</html>

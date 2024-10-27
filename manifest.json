@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "RobotCow",
+    "version": "1.0",
+    "description": "Assist in grabbing tickets",
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/icons8-cow-16.png",
+        "32": "icons/icons8-cow-32.png",
+        "48": "icons/icons8-cow-48.png",
+        "128": "icons/icons8-cow-128.png"
+      }
+    },
+    "icons": {
+      "16": "icons/icons8-cow-16.png",
+      "32": "icons/icons8-cow-32.png",
+      "48": "icons/icons8-cow-48.png",
+      "128": "icons/icons8-cow-128.png"
+    },
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "tabs"
+    ]
+  }
