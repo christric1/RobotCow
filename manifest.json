@@ -4,7 +4,7 @@
     "version": "1.0",
     "description": "Assist in grabbing tickets",
     "action": {
-      "default_popup": "popup.html",
+      "default_popup": "popup/popup.html",
       "default_icon": {
         "16": "icons/icons8-cow-16.png",
         "32": "icons/icons8-cow-32.png",
@@ -21,6 +21,15 @@
     "permissions": [
       "activeTab",
       "scripting",
-      "tabs"
-    ]
+      "tabs",
+      "storage"
+    ],
+    "background": {
+      "service_worker": "background.js",
+      "type": "module"
+    },
+    "content_scripts": [{
+    "matches": ["*://kham.com.tw/*"],
+    "js": ["script/kham-booking.js"]
+  }]
   }
